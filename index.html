@@ -21,14 +21,15 @@
 					<nav id="nav">
 						<ul>
 							<li class="current"><a href="index.html">Home</a></li>
+							<li><a href="FAQs.html">FAQ</a></li>
+							<li><a href="right-sidebar.html">Itinerary</a></li>
+							<li><a href="no-sidebar.html">Items for Sale</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<!--
 							<li class="submenu">
 								<a href="#">More</a>
 								<ul>
-									<li><a href="FAQs.html">FAQ's</a></li>
-									<li><a href="right-sidebar.html">Itinerary</a></li>
-									<li><a href="for-sale.html">For Sale</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<!--
+									
 									<li class="submenu">
 										<a href="#">Submenu</a>
 										<ul>
@@ -39,11 +40,12 @@
 											<li><a href="#">Ipsum Nisl</a></li>
 										</ul>
 									</li>
-									-->
+									- ->
 								</ul>
 							</li>
+							-->
 							<!--
-							<li><a href="#" class="button primary">Sign Up</a></li>
+								<li><a href="#" class="button primary">Sign Up</a></li>
 							-->
 						</ul>
 					</nav>
@@ -88,9 +90,17 @@
 						<h2>Brendan and Sofiya announce that they
 						<br />
 						will be <strong>leaving Vancouver</strong></h2>
-						<p>"With mixed feelings we announce that we'll be leaving our tiny apartment for the last
-						<br />
-						time to become traveling nomads. Read on to find out about our travel plans."</p>
+						<div id="statement-short">
+							<p>It is with mixed feelings that we (Brendan and Sofiya) announce that we will be<br />leaving Vancouver.  In the final week of August we will.. <a href="#" onclick="$('#statement-short').hide(); $('#statement-full').show(); return false;">Read more...</a></p>
+						</div>
+						<div id="statement-full" style="display: none;">
+							<p>It is with mixed feelings that we (Brendan and Sofiya) announce that we will be leaving Vancouver. In the final week of August we will walk out of our tiny apartment for the last time and become traveling nomads. After spending some time visiting family (in Duncan, Toronto, and Bulgaria), we will start with a month in Portugal and figure it out from there. We will travel until we're tired of it and then settle down somewhere (Berlin?) until we're tired of that, too. You can see a more detailed itinerary here: LINK</p>
+
+							<p>In the next 3-4 weeks we need to sell, store, or pack all of our belongings. We have a list of items for sale (LINK), please take a look, and please let us know if we might have something else that you want - almost everything we own is for sale. There is also a site that we will use to post where we will be, where we're going, and Sofi may even do some blog posts or something. Brendan won't though, so you'll probably just have to FaceTime us.</p>
+
+							<p>This is truly a once in a lifetime opportunity. We are unbelievably fortunate to have the means to be able to support ourselves regardless of location at a time in our lives when we are not tied to any particular place. This opportunity couldn't have happened without the support of our friends, family, and colleagues, and we are so incredibly grateful for all that YOU have done for us. Vancouver will always hold a special place in our heart, and it will always be full of real and adopted family (that's YOU). There are so many thousands of excellent memories here and for that we both extend a big THANK YOU! The last 5-10 years spent in Vancouver feel like a lifetime already [Brendan: That's because we've been dating for five years. Har har.
+							</p>
+						</div>
 					</header>
 
 					<!-- One -->
@@ -101,11 +111,18 @@
 									<header>
 										<h2><strong>Short itinerary</strong> <br />for the next few months</h2>
 									</header>
-									<p>Currently in: Vancouver <br />
-									   There until: Last week of August <br />
-									   With: You! <br/>
-									   Coming up: Toronto, Bulgaria, Portugal <br />
-									</p>
+
+									<table>
+										<tr>
+											<td style="text-align: left;">Currently in</td><td>Vancouver</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Until</td><td>Last week of August</td>
+										</tr>
+										<tr>
+											<td style="text-align: left;">Coming up</td><td>Toronto, Bulgaria, Portugal </td>
+										</tr>
+									</table>
 									<footer>
 										<ul class="buttons">
 											<li><a href="#" class="button">Detailed Itinerary</a></li>
@@ -138,7 +155,7 @@
 										<header>
 											<h3>Why are you leaving?</h3>
 										</header>
-										<p>We are so fortunate to have the means to embark on this adventure that we have talked about for years in what is truly a once in a lifetime opportunity.</p>
+										<p>We are so fortunate to be able to embark on this adventure that we have talked about for years in what is truly a once in a lifetime opportunity.</p>
 									</section>
 
 								</div>
@@ -160,7 +177,7 @@
 										<header>
 											<h3>How long will you be away?</h3>
 										</header>
-										<p>We're roughly estimating that this trip will last 1-2 years including a 1-year stay in Berlin, Germany.</p>
+										<p>We're <span style="font-style: italic;">guessing</span> that this trip will last 1-2 years including a 1-year stay in Berlin, Germany.</p>
 									</section>
 
 								</div>
@@ -180,7 +197,7 @@
 								<div class="col-4 col-12-narrower">
 
 									<section>
-										<span class="icon featured fa-question"></span>
+										<span class="icon featured fa-money"></span>
 										<header>
 											<h3>What will you do for money?</h3>
 										</header>
