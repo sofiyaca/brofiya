@@ -65,16 +65,13 @@
 						<header>
 							<h2>BROFIYA</h2>
 						</header>
-						<p>are leaving
-						<br />
-						<strong>Vancouver</strong> 
-						</p>
-						<p> They have to get 
-						<br />rid of stuff
+						<p>
+						are going traveling <strong>indefenitely</strong>
 						</p>
 						<footer>
 							<ul class="buttons stacked">
-								<li><a href="#images" class="button fit scrolly">Buy Their Stuff</a></li>
+								<li style="padding-top: 0; display: inline-block;"><a href="#statement" class="button small" onclick="$('#statement-short').hide(); $('#statement-full').show();">What?</a></li>
+								<li style="padding-top: 0; display: inline-block;"><a href="#itinerary" class="button small">Where?</a></li>
 							</ul>
 						</footer>
 
@@ -85,34 +82,51 @@
 			<!-- Main -->
 				<article id="main">
 
-					<header class="special container">
+					<header class="special container" id="statement">
 						<span class="icon fa-plane"></span>
 						<h2>Brendan and Sofiya announce that they
 						<br />
 						will be <strong>leaving Vancouver</strong></h2>
 						<br>
 						<div id="statement-short">
-							<p>With mixed feelings, we announce that we will be leaving Vancouver! In the final week of <br> August, we will...<a href="#" onclick="$('#statement-short').hide(); $('#statement-full').show(); return false;"> read more</a></p>
+							<p>With mixed feelings, we announce that we will be leaving Vancouver. In the final week of <br> August,
+							we will...<a href="#" onclick="$('#statement-short').hide(); $('#statement-full').slideDown(); return false;"> read more</a></p>
 						</div>
-						<div id="statement-full" style="display: none;">
-							<p>With mixed feelings, we announce that we will be leaving Vancouver! In the final week of August, we will walk out of our tiny apartment for the last time and become traveling nomads.</p>
+						<div id="statement-full" style="display: none; text-align: justify;">
+							<p>With mixed feelings, we announce that we will be leaving Vancouver. In the final week of August, we
+							will walk out of our tiny apartment for the last time and become traveling nomads.</p>
 
-							<p>After spending some time visiting family in Duncan, Toronto, and Bulgaria, we will start with a month in Portugal and figure it out from there. We will travel until we're tired of it and then settle down, potentially in Berlin, until we're tired of that, too. You can see a more <a href="itinerary.html">detailed itinerary.</a></p>
+							<p>After spending some time visiting family in Duncan, Toronto, and Bulgaria, we will start with a month
+							in Portugal and figure it out from there. We will travel until we're tired of it and then settle down,
+							potentially in Berlin, until we're tired of that, too. We've recorded <a
+								href="itinerary.html">our itinerary so far</a>, and rest assured that we will return to Canada one day.</p>
 
-							<p>In the next weeks, we plan to sell, store or pack all of our belongings. We have a list of <a href="for-sale.html">items for sale</a>, please take a look, and <a href="contact.html">let us know</a> and let us know if you're interested in purchasing any of these items.</p>
+							<p>In the next few weeks, we will be selling, storing or packing all of our belongings. We have a list of
+							<a href="for-sale.html">items for sale</a>, please take a look, and
+							<a href="contact.html">let us know</a> if you're interested in purchasing any of these items.</p>
 
-							<p>If you would like to keep in touch and follow along with our journey, please come back to this website that we will use to post where we're going and other updates. Alternatively, FaceTime us!</p>
+							<p>If you would like to keep in touch and follow along with our journey, please come back to this
+							website that we will use to post where we're going and other updates. Alternatively, FaceTime us!</p>
 
-							<p><strong>This is truly a once in a lifetime opportunity!</strong></p>
+							<p><strong>This is truly a once in a lifetime opportunity!</strong> We are unbelievably fortunate to be
+              able to support ourselves from any location at a time in our lives when our home consists only of easily
+              movable objects and people.</p>
 
-							<p>We are unbelievably fortunate to have the means to be able to support ourselves regardless of the location at a time in our lives when we are not tied to any particular place. This opportunity couldn't have happened without the support of our friends, family, and colleagues, and we are so incredibly grateful for all that you have done for us. Vancouver will always hold a special place in our hearts, and it will always be full of real and adopted family—that's YOU!</p>
+              <p>We will miss Vancouver. We will miss the mountains and the adventures and the music and the work. But
+              after much reflection, we've realized what what we will miss most is you. There have been thousands of
+              excellent memories that you all have made with us and we want to thank you all for being a part of it, and
+              a part of us. This opportunity couldn't have happened without the support of our friends, family, and
+              colleagues, and we are so incredibly grateful for all that you have done for us. Vancouver will always
+              hold a special place in our hearts, and it will always be full of real and adopted family &mdash; that's
+              YOU!</p>
 
-							<p>There are thousands of excellent memories here and for that, we both extend a big THANK YOU!</p>
+              <p>Love,<br>
+              Sofiya and Brendan</p>
 						</div>
 					</header>
 
 					<!-- One -->
-						<section class="wrapper style2 container special-alt">
+						<section class="wrapper style2 container special-alt" id="itinerary">
 							<div class="row gtr-50">
 								<div class="col-8 col-12-narrower">
 
@@ -159,18 +173,7 @@
 								<div class="col-4 col-12-narrower">
 
 									<section>
-										<span class="icon featured fa-question"></span>
-										<header>
-											<h3>Why are you leaving?</h3>
-										</header>
-										<p>We are so fortunate to be able to embark on this adventure that we have talked about for years in what is truly a once in a lifetime opportunity.</p>
-									</section>
-
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<span class="icon featured fa-question"></span>
+										<span class="icon featured fa-map-marker"></span>
 										<header>
 											<h3>Where are you going?</h3>
 										</header>
@@ -181,47 +184,25 @@
 								<div class="col-4 col-12-narrower">
 
 									<section>
-										<span class="icon featured fa-question"></span>
+										<span class="icon featured fa-calendar"></span>
 										<header>
 											<h3>How long will you be away?</h3>
 										</header>
-										<p>We're <span style="font-style: italic;">guessing</span> that this trip will last 1-2 years including a 1-year stay in Berlin, Germany.</p>
+                    We don't know! We'll travel for a while, maybe settle down for a while, then maybe travel for a
+                    while, and finally return to a permanent home in Canada.
 									</section>
 
 								</div>
-							</div>
-							<div class="row">
 								<div class="col-4 col-12-narrower">
 
 									<section>
-										<span class="icon featured fa-question"></span>
+										<span class="icon featured fa-road"></span>
 										<header>
 											<h3>How can I follow along or stay in touch?</h3>
 										</header>
-										<p>This website, Instagram (new profile), etc. [insert link]</p>
+										<p>Follow us on Facebook and Instagram!</p>
 									</section>
 
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<span class="icon featured fa-question"></span>
-										<header>
-											<h3>What will you do for money?</h3>
-										</header>
-										<p>We're both excellent go-go dancers... see this video [NSFW] [insert link].</p>
-									</section>
-
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<span class="icon featured fa-question"></span>
-										<header>
-											<h3>Can you come visit me?</h3>
-										</header>
-										<p>Yes! Drop your info in this <a href="contact.html">contact form</a> to let us know where you are and we'll get it touch.</p>
-									</section>
 								</div>
 							</div>
 							<footer class="major">
