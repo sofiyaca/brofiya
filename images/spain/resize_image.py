@@ -1,7 +1,7 @@
 import os, sys
 from PIL import Image
 
-size = 9073, 709
+size = 8073, 609
 
 for infile in sys.argv[1:]:
     outfile = os.path.splitext(infile)[0] + ".jpeg"
