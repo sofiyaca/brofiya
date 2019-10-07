@@ -124,7 +124,11 @@ title: Brofiya
 							</header>
 
 							<header>
-								<a href="travel-tales.html"><h4>Italy: Turin and Milan</h4></a>
+								{% for post in site.posts limit:1 %}
+
+								<a href="{{ post.url }}"><h4>{{ post.title }} <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span></h4></a>
+								
+								{% endfor %}
 							</header>
 
 							<footer class="major">
