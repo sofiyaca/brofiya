@@ -1,0 +1,86 @@
+---
+layout: default
+title: Itinerary
+active: itinerary
+---
+
+<!-- Main -->
+<article id="main">
+
+	<header class="special container">
+		<span class="icon fa-globe"></span>
+		<h2><strong>Travel Plan</strong></h2>
+		<p>Where we've been and where we plan to go next.</p>
+	</header>
+
+	<!-- One -->
+	<section class="wrapper style4 container">
+
+		<div class="row gtr-150">
+			<div class="col-8 col-12-narrower">
+
+				<!-- Content -->
+				<div class="content">
+					<section>
+						<a href="#" class="image featured"><img src="images/portugal/IMG_5253.jpg" alt="beach in Portimão" /></a>
+
+						<div id="itinerary-past">
+							<p>See our earlier exploits...<a href="#" onclick="$('#itinerary-past').hide(); $('#itinerary-full').slideDown(); return false;"> here</a></p>
+						</div>
+
+						<div id="itinerary-full" style="display: none;">
+
+
+							{% for leg in site.data.itinerary limit:23 offset:1 %}
+							<header>
+
+								<h3><strong>{{ leg.date }}</strong> {{ leg.location }}</h3> 
+								<p>{{ leg.description }}</p>
+								<span class="icon fa-arrow-down"></span>
+
+							</header>	
+							{% endfor %}
+
+
+						</div>
+
+
+						{% for leg in site.data.itinerary offset:24 %}
+						<header>
+
+							<h3><strong>{{ leg.date }}</strong> {{ leg.location }}</h3> 
+							<p>{{ leg.description }}</p>
+							<span class="icon fa-arrow-down"></span>
+
+						</header>	
+						{% endfor %}
+
+
+					</section>
+				</div>
+
+			</div>
+			<div class="col-4 col-12-narrower">
+
+				<!-- Sidebar -->
+				<div class="sidebar">
+					<section>
+						<a href="#" class="image featured"><img src="images/portugal/IMG_5317.jpg" alt="street art of Lisbon" /></a>
+						<header>
+							<h3>Where should we visit next?</h3>
+						</header>
+						<p>Submit your suggestion via the contact form.</p>
+						<footer>
+							<ul class="buttons">
+								<li><a href="contact.html" class="button small">Where to Next</a></li>
+							</ul>
+						</footer>
+					</section>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+</article>
+

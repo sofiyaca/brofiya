@@ -1,0 +1,29 @@
+---
+layout: default
+title: Travel Tales
+active: travel-tales
+---
+
+<article id="main">
+
+	<header class="special container">
+		<span class="icon fa-book"></span>
+		<h2><strong>Travel Tales</strong></h2>
+		<p>Some of the best memories from our year-long trip.</p>
+	</header>
+
+
+	<section class="wrapper style4 container">
+
+		<ul class="myposts">
+			{% for post in site.posts %}
+			<header>
+				<a href="{{ post.url }}"><h4>{{ post.title }} <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span></h4></a>
+			</header>
+			<br />
+			{% endfor %}
+		</ul>
+
+	</section>
+
+</article>
