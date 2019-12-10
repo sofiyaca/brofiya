@@ -8,35 +8,21 @@ title: Brofiya
 
 	<header class="special container" id="statement">
 		<span class="icon fa-plane"></span>
-		<h2>Brendan and Sofiya
-			<br />have gone traveling</h2>
-			<br>
+		<br>
 			<div id="statement-short">
-				<p>In the final week of August, 2018, we left our home to go traveling... <a href="#" onclick="$('#statement-short').hide(); $('#statement-full').slideDown(); return false;"> read more</a></p>
+				<p>In the final week of August, 2018, we left our home to go traveling. After a year and two months, 
+					<br> we got to see nearly 50 locations. Check them out on the map!</p>
 			</div>
-			<div id="statement-full" style="display: none;">
-				<p>In the final week of August, 2018, we left our home to go traveling.</p>
-
-				<p>After packing up our tiny apartment and selling our belongings, we took the once in a lifetime opportunity to see the world.</p>
-
-				<p>We are unbelievably fortunate to be able to support ourselves from any location at a time in our lives when our home consists only of easily movable people and objects. This opportunity couldn't have happened without the support of our friends, family, and colleagues.</p>
-
-				<p>We are so incredibly grateful for all that you have done for us!</p>
-
-				<p>Love,<br>
-					Sofiya and Brendan</p>
-				</div>
 				<div>
-					<h3>My Google Maps Demo</h3>
 					<!--The div element for the map -->
 					<div id="map"></div>
 					<script>
 
 					function initMap() {
 
-					// Initialize and add the map
+					// Initialize and add the map 40.3737504,13.3374
 					var map = new google.maps.Map(
-						document.getElementById('map'), {zoom: 3, center: {lat: 34.580921, lng: -41.070319}
+						document.getElementById('map'), {zoom: 2, center: {lat: 40.3737504, lng: -33.6840844}
 					});
 
 					  // The markers positioned at each location from locations.
@@ -67,29 +53,33 @@ title: Brofiya
 					  ['Santa Teresa, Costa Rica', 9.6457266,-85.1776028],
 					  ['Tamarindo, Costa Rica', 10.3009096,-85.8468247],
 					  ['Saint Martin, Saint Martin', 18.0648535,-63.1168354],
-					  ['Mayrhofen, Austria', 47.1633701,11.8446916],
-					  ['Neustift, Austria', 47.1633701,11.8446916],
-					  ['Varna, Bulgaria', 47.1633701,11.8446916],
-					  ['Berlin, Germany', 47.1633701,11.8446916],
-					  ['Bistensee, Germany', 47.1633701,11.8446916],
-					  ['Hamburg, Germany', 47.1633701,11.8446916],
-					  ['Klitmøller, Denmark', 47.1633701,11.8446916],
-					  ['Hirtshals, Denmark', 47.1633701,11.8446916],
-					  ['Drammen, Norway', 47.1633701,11.8446916],
-					  ['Lærdalsøyri, Norway', 47.1633701,11.8446916],
-					  ['Jostedal, Norway', 47.1633701,11.8446916],
-					  ['Geiranger, Norway',	47.1633701,11.8446916],
-					  ['Kristiansund, Norway', 47.1633701,11.8446916],
-					  ['Mörkret, Sweden', 47.1633701,11.8446916],
-					  ['Åmål, Sweden', 47.1633701,11.8446916],
-					  ['Strömstad, Sweden', 47.1633701,11.8446916],
-					  ['Grebbestad, Sweden', 47.1633701,11.8446916],
-					  ['Guldborg, Denmark', 47.1633701,11.8446916],
-					  ['Rostock, Germany', 47.1633701,11.8446916],
-					  ['Kos, Greece', 47.1633701,11.8446916],
-					  ['London, United Kingdom', 47.1633701,11.8446916],
-					  ['Corfu, Greece', 47.1633701,11.8446916],
-					  ['Athens, Greece', 47.1633701,11.8446916],
+					  ['Mayrhofen, Austria', 47.1633555,11.8446916],
+					  ['Neustift, Austria', 47.0454015,11.1341989],
+					  ['Varna, Bulgaria', 43.2047556,27.8028254],
+					  ['Berlin, Germany', 52.5065133,13.1445561],
+					  ['Bistensee, Germany', 54.3906136,9.6907304],
+					  ['Hamburg, Germany', 53.5582447,9.6476466],
+					  ['Klitmøller, Denmark', 57.0393268,8.477776],
+					  ['Hirtshals, Denmark', 57.5523486,9.9014416],
+					  ['Drammen, Norway', 59.7340031,10.1140134],
+					  ['Lærdalsøyri, Norway', 61.0998155,7.4695028],
+					  ['Jostedal, Norway', 61.6787938,7.2009127],
+					  ['Geiranger, Norway',	62.0988051,7.2005966],
+					  ['Kristiansund, Norway', 63.1158395,7.7133089],
+					  ['Mörkret, Sweden', 61.653478,12.7406067],
+					  ['Åmål, Sweden', 59.0516243,12.6639977],
+					  ['Strömstad, Sweden', 58.9398194,11.171633],
+					  ['Grebbestad, Sweden', 58.6930381,11.2462399],
+					  ['Guldborg, Denmark', 54.8649233,11.6483795],
+					  ['Rostock, Germany', 54.1474698,12.0068716],
+					  ['Kos, Greece', 36.8912636,27.2770305],
+					  ['Kalimnos, Greece', 36.9529308,26.9709604],
+					  ['Leros, Greece', 37.1493458,26.7581727],
+					  ['London, United Kingdom', 51.5285582,-0.2416807],
+					  ['Corfu, Greece', 39.6110151,19.8919893],
+					  ['Lefkada, Greece', 38.8320949,20.689258],
+					  ['Kefalonia, Greece', 38.2749284,20.444716],
+					  ['Athens, Greece', 37.990832,23.7033199],
 					  ]
 
 					  for (count = 0; count < locations.length; count++) {
@@ -210,7 +200,7 @@ title: Brofiya
 						</header>
 
 						<header>
-							{% for post in site.posts limit:1 %}
+							{% for post in site.posts limit:3 %}
 
 							<a href="{{ post.url }}"><h4>{{ post.title }} <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span></h4></a>
 
