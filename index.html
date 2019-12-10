@@ -3,143 +3,226 @@ layout: home
 title: Brofiya
 ---
 
-			<!-- Main -->
-				<article id="main">
+<!-- Main -->
+<article id="main">
 
-					<header class="special container" id="statement">
-						<span class="icon fa-plane"></span>
-						<h2>Brendan and Sofiya
-						<br />
-						have gone traveling</h2>
-						<br>
-						<div id="statement-short">
-							<p>In the final week of August, 2018, we left our home to go traveling... <a href="#" onclick="$('#statement-short').hide(); $('#statement-full').slideDown(); return false;"> read more</a></p>
-						</div>
-						<div id="statement-full" style="display: none;">
-							<p>In the final week of August, 2018, we left our home to go traveling.</p>
+	<header class="special container" id="statement">
+		<span class="icon fa-plane"></span>
+		<h2>Brendan and Sofiya
+			<br />have gone traveling</h2>
+			<br>
+			<div id="statement-short">
+				<p>In the final week of August, 2018, we left our home to go traveling... <a href="#" onclick="$('#statement-short').hide(); $('#statement-full').slideDown(); return false;"> read more</a></p>
+			</div>
+			<div id="statement-full" style="display: none;">
+				<p>In the final week of August, 2018, we left our home to go traveling.</p>
 
-							<p>After packing up our tiny apartment and selling our belongings, we took the once in a lifetime opportunity to see the world.</p>
+				<p>After packing up our tiny apartment and selling our belongings, we took the once in a lifetime opportunity to see the world.</p>
 
-							<p>We are unbelievably fortunate to be able to support ourselves from any location at a time in our lives when our home consists only of easily movable people and objects. This opportunity couldn't have happened without the support of our friends, family, and colleagues.</p>
+				<p>We are unbelievably fortunate to be able to support ourselves from any location at a time in our lives when our home consists only of easily movable people and objects. This opportunity couldn't have happened without the support of our friends, family, and colleagues.</p>
 
-							<p>We are so incredibly grateful for all that you have done for us!</p>
+				<p>We are so incredibly grateful for all that you have done for us!</p>
 
-				             <p>Love,<br>
-				             Sofiya and Brendan</p>
-						</div>
-					</header>
+				<p>Love,<br>
+					Sofiya and Brendan</p>
+				</div>
+				<div>
+					<h3>My Google Maps Demo</h3>
+					<!--The div element for the map -->
+					<div id="map"></div>
+					<script>
 
-					<!-- One -->
-						<section class="wrapper style2 container special-alt" id="itinerary">
-							<div class="row gtr-50">
-								<div class="col-8 col-12-narrower">
+					function initMap() {
 
-									<header>
-										<h2><strong>Travel Stats</strong></h2>
-									</header>
+					// Initialize and add the map
+					var map = new google.maps.Map(
+						document.getElementById('map'), {zoom: 3, center: {lat: 34.580921, lng: -41.070319}
+					});
 
-									<table>
-										<tr>
-											<td style="text-align: left;">Total days</td><td>400</td>
-										</tr>
-										<tr>
-											<td style="text-align: left;">Total distance</td><td>101, 248 km</td>
-										</tr>
-										<tr>
-											<td style="text-align: left;">Around the Earth</td><td>2.5 times</td>
-										</tr>
-										<tr>
-											<td style="text-align: left;">Places visited</td><td>46</td>
-										</tr>
-									</table>
-									<footer>
-										<ul class="buttons">
-											<li><a href="itinerary.html" class="button">Detailed Itinerary</a></li>
-										</ul>
-									</footer>
+					  // The markers positioned at each location from locations.
+					  var marker, count
 
-								</div>
-								<div class="col-4 col-12-narrower imp-narrower">
+					  // Create an infowindow
+					  var infowindow = new google.maps.InfoWindow({});
 
-									<ul class="featured-icons">
-										<li><span class="icon fa-map"><span class="label">Feature 1</span></span></li>
-										<li><span class="icon fa-suitcase"><span class="label">Feature 2</span></span></li>
-										<li><span class="icon fa-bed"><span class="label">Feature 3</span></span></li>
-										<li><span class="icon fa-map-marker"><span class="label">Feature 4</span></span></li>
-										<li><span class="icon fa-map-signs"><span class="label">Feature 5</span></span></li>
-										<li><span class="icon fa-globe"><span class="label">Feature 6</span></span></li>
-									</ul>
+					  var locations = [
+					  ['Vancouver, Canada', 49.2578263,-123.1939436],
+					  ['Duncan, Canada', 48.7799773,-123.7109697],
+					  ['Sofia, Bulgaria', 42.695537,23.2539069],
+					  ['Paris, France', 48.8589507,2.2770203],
+					  ['Faro, Portugal', 37.0179216,-7.9749515],
+					  ['Lisbon, Portugal', 38.7436883,-9.1952227],
+					  ['Madrid, Spain', 40.4381311,-3.8196205],
+					  ['Logroño, Spain', 42.4603231,-2.4658723],
+					  ['Barcelona, Spain', 41.3948976,2.078728],
+					  ['Turin, Italy', 45.0702388,7.6000494],
+					  ['Milan, Italy', 45.4022409,8.8486628],
+					  ['Belgrade, Serbia', 44.8154033,20.2825137],
+					  ['Shumen, Bulgaria', 43.2698088,26.9389115],
+					  ['Nairobi, Kenya', -1.3028618,36.707311],
+					  ['Kampala, Uganda', 0.3132008,32.5290851],
+					  ['Toronto, Canada', 43.7184038,-79.5181415],
+					  ['Piedras Blancas National Park, Costa Rica', 8.5357255,-83.4289339],
+					  ['Dominical, Costa Rica', 9.25149,-83.8632345],
+					  ['Santa Teresa, Costa Rica', 9.6457266,-85.1776028],
+					  ['Tamarindo, Costa Rica', 10.3009096,-85.8468247],
+					  ['Saint Martin, Saint Martin', 18.0648535,-63.1168354],
+					  ['Mayrhofen, Austria', 47.1633701,11.8446916],
+					  ['Neustift, Austria', 47.1633701,11.8446916],
+					  ['Varna, Bulgaria', 47.1633701,11.8446916],
+					  ['Berlin, Germany', 47.1633701,11.8446916],
+					  ['Bistensee, Germany', 47.1633701,11.8446916],
+					  ['Hamburg, Germany', 47.1633701,11.8446916],
+					  ['Klitmøller, Denmark', 47.1633701,11.8446916],
+					  ['Hirtshals, Denmark', 47.1633701,11.8446916],
+					  ['Drammen, Norway', 47.1633701,11.8446916],
+					  ['Lærdalsøyri, Norway', 47.1633701,11.8446916],
+					  ['Jostedal, Norway', 47.1633701,11.8446916],
+					  ['Geiranger, Norway',	47.1633701,11.8446916],
+					  ['Kristiansund, Norway', 47.1633701,11.8446916],
+					  ['Mörkret, Sweden', 47.1633701,11.8446916],
+					  ['Åmål, Sweden', 47.1633701,11.8446916],
+					  ['Strömstad, Sweden', 47.1633701,11.8446916],
+					  ['Grebbestad, Sweden', 47.1633701,11.8446916],
+					  ['Guldborg, Denmark', 47.1633701,11.8446916],
+					  ['Rostock, Germany', 47.1633701,11.8446916],
+					  ['Kos, Greece', 47.1633701,11.8446916],
+					  ['London, United Kingdom', 47.1633701,11.8446916],
+					  ['Corfu, Greece', 47.1633701,11.8446916],
+					  ['Athens, Greece', 47.1633701,11.8446916],
+					  ]
 
-								</div>
-							</div>
-						</section>
+					  for (count = 0; count < locations.length; count++) {
+					  	marker = new google.maps.Marker({
+					  		position: new google.maps.LatLng(locations[count][1], locations[count][2]), 
+					  		map: map, 
+					  		title: locations[count][0]
+					  	});
 
-					<!-- Two -->
-						<section class="wrapper style1 container special">
-							<div class="row">
-								<div class="col-4 col-12-narrower">
+					  	google.maps.event.addListener(marker, 'click', (function (marker, count) {
+					  		return function () {
+					  			infowindow.setContent(locations[count][0]);
+					  			infowindow.open(map, marker);
+					  		}
+					  	}) (marker, count));
+					  } 
+					}
+					  </script>
 
-									<section>
-										<span class="icon featured fa-map-marker"></span>
-										<header>
-											<h3>Where are you going?</h3>
-										</header>
-										<p>Our first series of stops will be in Europe, potentially until March 2019. Overall, our plans are very loose so come back to this site to see where we end up.</p>
-									</section>
+					</div>
+				</header>
 
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<span class="icon featured fa-calendar"></span>
-										<header>
-											<h3>How long will you be away?</h3>
-										</header>
-										<p>We don't know! We'll travel for a while, maybe settle down for a while, then maybe travel for a
-							            while, and finally return to a permanent home in Canada.</p>
-									</section>
-
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<span class="icon featured fa-road"></span>
-										<header>
-											<h3>How can I follow along or stay in touch?</h3>
-										</header>
-										<p>Come back to this website and read our <a href="travel-tales.html">Travel Tales</a> or follow us on Facebook and Instagram!</p>
-									</section>
-
-								</div>
-							</div>
-							<footer class="major">
-									<ul class="buttons">
-										<li><a href="FAQs.html" class="button">See Detailed FAQ's</a></li>
-									</ul>
-							</footer>
-						</section>
-
-					<!-- Three -->
-						<section id="images" class="wrapper style3 container special">
-
-							<header class="major">
-								<h2>Read the latest <strong>travel tales</strong></h2>
-							</header>
+				<!-- One -->
+				<section class="wrapper style2 container special-alt" id="itinerary">
+					<div class="row gtr-50">
+						<div class="col-8 col-12-narrower">
 
 							<header>
-								{% for post in site.posts limit:1 %}
-
-								<a href="{{ post.url }}"><h4>{{ post.title }} <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span></h4></a>
-								
-								{% endfor %}
+								<h2><strong>Travel Stats</strong></h2>
 							</header>
 
-							<footer class="major">
+							<table>
+								<tr>
+									<td style="text-align: left;">Total days</td><td>400</td>
+								</tr>
+								<tr>
+									<td style="text-align: left;">Total distance</td><td>101, 248 km</td>
+								</tr>
+								<tr>
+									<td style="text-align: left;">Around the Earth</td><td>2.5 times</td>
+								</tr>
+								<tr>
+									<td style="text-align: left;">Places visited</td><td>46</td>
+								</tr>
+							</table>
+							<footer>
 								<ul class="buttons">
-									<li><a href="travel-tales.html" class="button">More Tales</a></li>
+									<li><a href="itinerary.html" class="button">Detailed Itinerary</a></li>
 								</ul>
 							</footer>
 
-						</section>
+						</div>
+						<div class="col-4 col-12-narrower imp-narrower">
+
+							<ul class="featured-icons">
+								<li><span class="icon fa-map"><span class="label">Feature 1</span></span></li>
+								<li><span class="icon fa-suitcase"><span class="label">Feature 2</span></span></li>
+								<li><span class="icon fa-bed"><span class="label">Feature 3</span></span></li>
+								<li><span class="icon fa-map-marker"><span class="label">Feature 4</span></span></li>
+								<li><span class="icon fa-map-signs"><span class="label">Feature 5</span></span></li>
+								<li><span class="icon fa-globe"><span class="label">Feature 6</span></span></li>
+							</ul>
+
+						</div>
+					</div>
+				</section>
+
+				<!-- Two -->
+				<section class="wrapper style1 container special">
+					<div class="row">
+						<div class="col-4 col-12-narrower">
+
+							<section>
+								<span class="icon featured fa-map-marker"></span>
+								<header>
+									<h3>Where are you going?</h3>
+								</header>
+								<p>Our first series of stops will be in Europe, potentially until March 2019. Overall, our plans are very loose so come back to this site to see where we end up.</p>
+							</section>
+
+						</div>
+						<div class="col-4 col-12-narrower">
+
+							<section>
+								<span class="icon featured fa-calendar"></span>
+								<header>
+									<h3>How long will you be away?</h3>
+								</header>
+								<p>We don't know! We'll travel for a while, maybe settle down for a while, then maybe travel for a
+									while, and finally return to a permanent home in Canada.</p>
+								</section>
+
+							</div>
+							<div class="col-4 col-12-narrower">
+
+								<section>
+									<span class="icon featured fa-road"></span>
+									<header>
+										<h3>How can I follow along or stay in touch?</h3>
+									</header>
+									<p>Come back to this website and read our <a href="travel-tales.html">Travel Tales</a> or follow us on Facebook and Instagram!</p>
+								</section>
+
+							</div>
+						</div>
+						<footer class="major">
+							<ul class="buttons">
+								<li><a href="FAQs.html" class="button">See Detailed FAQ's</a></li>
+							</ul>
+						</footer>
+					</section>
+
+					<!-- Three -->
+					<section id="images" class="wrapper style3 container special">
+
+						<header class="major">
+							<h2>Read the latest <strong>travel tales</strong></h2>
+						</header>
+
+						<header>
+							{% for post in site.posts limit:1 %}
+
+							<a href="{{ post.url }}"><h4>{{ post.title }} <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span></h4></a>
+
+							{% endfor %}
+						</header>
+
+						<footer class="major">
+							<ul class="buttons">
+								<li><a href="travel-tales.html" class="button">More Tales</a></li>
+							</ul>
+						</footer>
+
+					</section>
 
 				</article>
